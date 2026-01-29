@@ -1,0 +1,100 @@
+header{
+    text-align: center;
+    background-color: rgb(175, 120, 227);
+    color: white;
+    padding: 10px 30px;
+    font-size: larger;
+}
+.main{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background: #e7dfdf;
+    margin: 2px;
+    
+}
+.items{
+    text-align: center;
+}
+.items img{
+    width: 80px;
+    height: 80px;
+}
+.items p{
+    margin-top: 8px;
+    font-weight: bold;
+}
+.content{
+    display: flex;
+    padding: 20px;
+}
+.content {
+    background-image: url(shop.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat:no-repeat ;
+    width: 100%;
+    height: auto;
+}
+.shopping{
+    background-color: bisque;
+    text-align: center;
+    padding: 20px;
+}
+#shopping-time{
+    margin-top: 30px;
+   
+}
+background{
+    width: 100%;
+    height: auto;
+    background-image: url(shop.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+.ras{
+    height: 100vh;
+    background-image: url(shop.jpg.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 60px;
+    color: blue;
+    font-size: 200%;
+    
+}
+.ras p{
+    font-family: cursive;
+    color: rgb(248, 153, 85);
+}
+.sales p{
+    font-style: italic;
+    font-size: 120%;
+}
+.sales h3{
+    font-size: larger;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: gray;
+    color: black;
+    padding: 10px;
+    
+}
+.sales ul{
+    font-size: larger;
+}
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+.pay h3{
+    background-color: grey;
+    color: rgb(12, 12, 12);
+    padding: 5px;
+
+}
