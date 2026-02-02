@@ -1,83 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fashion store</title>
+    <title>ResumeAI | Relevance Scorer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <div class="app-container">
         <header>
-            <h2>Fashion store</h2>
+            <div class="logo">Resume<span>AI</span></div>
+            <h1>Relevance Scorer</h1>
+            <p>Optimize your resume for the perfect role.</p>
         </header>
-        <div class="main">
-            <div class="items">
-                <img src="tshirt.png" alt="T-shirts">
-                <p>T-shirts</p>
+
+        <main>
+            <div class="input-section card">
+                <div class="form-group">
+                    <label for="job-role">Target Job Role</label>
+                    <select id="job-role">
+                        <option value="" disabled selected>Select a role...</option>
+                        <option value="frontend">Frontend Developer</option>
+                        <option value="backend">Backend Developer</option>
+                        <option value="fullstack">Full Stack Developer</option>
+                        <option value="data-scientist">Data Scientist</option>
+                        <option value="product-manager">Product Manager</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="pdf-upload">Upload Resume (PDF)</label>
+                    <div class="file-upload-wrapper">
+                        <input type="file" id="pdf-upload" accept=".pdf" class="hidden-input">
+                        <label for="pdf-upload" class="upload-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="17 8 12 3 7 8"></polyline>
+                                <line x1="12" y1="3" x2="12" y2="15"></line>
+                            </svg>
+                            <span>Choose PDF File</span>
+                        </label>
+                        <span id="file-name" class="file-name">No file chosen</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="resume-text">Or Paste Resume Text</label>
+                    <textarea id="resume-text" placeholder="Paste your resume content here..."></textarea>
+                </div>
+
+                <button id="analyze-btn" class="primary-btn">Analyze Resume</button>
             </div>
-            <div class="items">
-                <img src="pant.png" alt="pant">
-                <p>Pant</p>
+
+            <div class="results-section hidden" id="results-section">
+                <div class="score-card card">
+                    <h2>Relevance Score</h2>
+                    <div class="score-circle">
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle-bg" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <path class="circle" id="score-circle-path" stroke-dasharray="0, 100" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <text x="18" y="20.35" class="percentage" id="score-text">0%</text>
+                        </svg>
+                    </div>
+                    <div id="rating-text" class="rating-text">Before Analysis</div>
+                </div>
+
+                <div class="feedback-card card">
+                    <h3>Missing Keywords</h3>
+                    <p class="subtext">Add these to boost your score:</p>
+                    <div id="missing-keywords" class="tags-container">
+                        <!-- Tags will be injected here -->
+                    </div>
+                </div>
             </div>
-            <div class="items">
-                <img src="sunglass.png" alt="sunglass">
-                <p>Sunglasses</p>
-            </div>
-            <div class="items">
-            <img src="shoes.png" alt="shoes">
-            <p>Shoes</p>
-        </div>
-        </div>
-        <div class=" ras">
-            <h2>Shopping Time</h2>
-            <p>Less Time-Shop More</p>
-
-        </div>
-        <div class="sales">
-            <h3>Fashion Sale</h3>
-            <p>Fashion sales cover all activities involved in selling fashion 
-                products, including clothing, footwear, and accessories.
-                 They involve understanding fashion trends, managing inventory, 
-                 visual merchandising, marketing and promotions, customer service,
-                  pricing, and meeting sales targets—both in 
-                physical stores and online—to maximize revenue and build brand loyalty.</p>
-                <ul>
-                    <li>50% Off / Big Discounts</li>
-
-<li>Low Cost / Affordable Prices</li>
-
-<li>Buy 1 Get 1 Free</li>
-
-<li>Seasonal Sale</li>
-
-<li>Clearance Sale</li>
-
-<li>Limited Time Offer</li>
-
-<li>Best Price Guarantee</li>
-
-<li>New Arrivals at Sale Price</li>
-                </ul>
-            
-        </div>
-        <div class="pay"> 
-            <h3>Payment Option</h3>
-            <p>
-                The shopping mall offers multiple convenient and secure payment methods 
-                to ensure a smooth shopping experience. Customers can make payments
-                 using cash, debit cards, credit cards, UPI, mobile wallets, 
-                 and net banking. Contactless and digital payment options are
-                  available for faster checkout, and all transactions are
-                 processed through secure systems for customer safety and convenience.
-            </p>
-            <footer>
-               <p> 2000-2026 FashionStore.com</p>
-               <p>email:fashionstore@gamil.com</p>
-            </footer>
-
-        </div>
-
-   
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
