@@ -18,3 +18,25 @@
 
 
 }
+.middle h2{
+    text-align: center;
+    align-items: center;
+    padding: 50px;
+    font-size: 50px;
+    font-family: elephant;
+    background-color: aqua;
+    
+}
+.cycle{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: purple;
+}
+.two{
+    padding: 60px;
+    font-size: 40px;
+    font-weight: bold;
+    background-color: blueviolet;
+    border-radius: 50px;
+}
