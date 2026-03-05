@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.bg {
+    background-image: url(back.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    margin: 0;
+    align-items: center;
+    justify-items: center;
+    padding: 100px;
+    font-size: 35px;
+    font-style: italic;
+
+
+}
