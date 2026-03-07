@@ -1,10 +1,46 @@
+*{
+    margin-top: 20px;
+}
 .layout{
     display: flex;
     padding: 16px;
     border: 1px solid black;
-    background-color: blue;
-    width: 300px;
-    height: 100px;
-    margin: 12px;
     
+    width: 260px;
+    height: 450px;
+    margin: 10px;
+    flex-direction: column;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    
+}
+.por{
+    width: 260px;
+    height: 200px;
+    margin: 2px;
+    border-radius: 17px;
+    
+}
+h2{
+    text-align: center;
+    font-family: elephant;
+    font-weight: 300;
+}
+p{
+    color: gray;
+}
+.linke {
+    text-align: center;
+    color: rgb(55, 25, 25);
+    text-decoration: none;
+    font-weight: 800;
+}
+.linke a{
+    color: rgb(84, 39, 70);
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 15px;
+}
+.layout:hover{
+    transform: scale(1.1);
 }
