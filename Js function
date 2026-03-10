@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple OnClick Example</title>
+</head>
+
+<body>
+
+<h2 id="text">Welcome to My Page</h2>
+
+<button onclick="changeText()">Click Me</button>
+
+<script>
+function changeText() {
+    document.getElementById("text").innerHTML = "Button Clicked!";
+}
+</script>
+
+</body>
+</html>
