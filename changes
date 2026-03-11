@@ -1,0 +1,6 @@
+var name='ram';
+console.log(name);
+// changing name
+var name='ram';
+name='sita';
+console.log(name);
