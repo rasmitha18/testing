@@ -1,9 +1,18 @@
-var a=10+20;
+//number
+let a;
+a=10;
 console.log(a);
 
-const b=100;
+//string
+
+let b;
+b='ram charan';
 console.log(b);
 
-let c;
-c=1000-1;
-console.log(c);
+// char
+ const k='C';
+ console.log(k);
+
+ //boolen
+
+ console.log(true);
