@@ -1,0 +1,35 @@
+// Common mistake: closures in loops
+function problematicExample() {
+  var buttons = document.querySelectorAll('button');
+  
+  // This will log the same value for all buttons
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', function() {
+      console.log(i); // Always logs the final value of i
+    });
+  }
+}
+
+// Solution 1: Using let (block scope)
+function solution1() {
+  var buttons = document.querySelectorAll('button');
+  
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', function() {
+      console.log(i); // Logs the correct value
+    });
+  }
+}
+
+// Solution 2: Using IIFE (Immediately Invoked Function Expression)
+function solution2() {
+  var buttons = document.querySelectorAll('button');
+  
+  for (var i = 0; i < buttons.length; i++) {
+    (function(index) {
+      buttons[index].addEventListener('click', function() {
+        console.log(index); // Logs the correct value
+      });
+    })(i);
+  }
+}
